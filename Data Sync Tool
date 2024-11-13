@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Sync files between directories
+SOURCE="/path/to/source"
+DEST="/path/to/destination"
+
+rsync -avh --delete "$SOURCE" "$DEST"
+echo "Data synchronization completed."
