@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Analyze disk usage
+du -sh /path/to/analyze/*
