@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Organize files by extension
+TARGET_DIR="/path/to/organize"
+
+for file in "$TARGET_DIR"/*; do
+    ext="${file##*.}"
+    mkdir -p "$TARGET_DIR/$ext"
+    mv "$file" "$TARGET_DIR/$ext/"
+done
+echo "Files organized by extension."
