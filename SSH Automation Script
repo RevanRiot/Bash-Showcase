@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Run remote commands via SSH
+SERVER="user@remote-server"
+COMMAND="ls -l /home/user"
+
+ssh "$SERVER" "$COMMAND"
