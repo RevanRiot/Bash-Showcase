@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Parse logs for errors
+LOG_FILE="/var/log/syslog"
+grep -i "error" "$LOG_FILE"
