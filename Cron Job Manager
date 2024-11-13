@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Add a cron job to run a script every day
+CRON_CMD="/path/to/script.sh"
+CRON_JOB="0 0 * * * $CRON_CMD"
+
+(crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -
+echo "Cron job added."
