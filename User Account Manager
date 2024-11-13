@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Add and delete users
+echo "User Management"
+echo "1. Add User"
+echo "2. Delete User"
+read -p "Choose an option: " choice
+
+case $choice in
+1)
+    read -p "Enter username: " username
+    sudo useradd "$username"
+    echo "User $username added."
+    ;;
+2)
+    read -p "Enter username: " username
+    sudo userdel "$username"
+    echo "User $username deleted."
+    ;;
+*)
+    echo "Invalid choice."
+    ;;
+esac
