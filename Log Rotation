@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Rotate logs and compress older logs
+LOG_DIR="/var/log/myapp"
+MAX_LOGS=5
+
+cd "$LOG_DIR"
+ls -t | tail -n +$((MAX_LOGS + 1)) | xargs -I {} gzip "{}"
+echo "Log rotation completed."
