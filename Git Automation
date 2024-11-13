@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Automate common Git operations
+echo "Git Automation Script"
+echo "1. Add and Commit"
+echo "2. Push Changes"
+echo "3. Pull Changes"
+read -p "Choose an option: " choice
+
+case $choice in
+1)
+    git add .
+    read -p "Enter commit message: " msg
+    git commit -m "$msg"
+    ;;
+2)
+    git push
+    ;;
+3)
+    git pull
+    ;;
+*)
+    echo "Invalid choice."
+    ;;
+esac
