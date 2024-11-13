@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Simple command-line menu
+while true; do
+    echo "Menu"
+    echo "1. Show Date"
+    echo "2. Show Uptime"
+    echo "3. Exit"
+    read -p "Choose an option: " choice
+
+    case $choice in
+    1) date ;;
+    2) uptime ;;
+    3) break ;;
+    *) echo "Invalid choice." ;;
+    esac
+done
