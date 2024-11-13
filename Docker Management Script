@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Manage Docker containers
+echo "Docker Management Script"
+echo "1. List Containers"
+echo "2. Start Container"
+echo "3. Stop Container"
+echo "4. Remove Container"
+read -p "Choose an option: " choice
+
+case $choice in
+1)
+    docker ps -a
+    ;;
+2)
+    read -p "Enter container name: " name
+    docker start "$name"
+    ;;
+3)
+    read -p "Enter container name: " name
+    docker stop "$name"
+    ;;
+4)
+    read -p "Enter container name: " name
+    docker rm "$name"
+    ;;
+*)
+    echo "Invalid choice."
+    ;;
+esac
