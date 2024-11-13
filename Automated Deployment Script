@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Deploy a web application
+APP_DIR="/var/www/myapp"
+BACKUP_DIR="/var/www/myapp_backup"
+
+if [ -d "$APP_DIR" ]; then
+    cp -r "$APP_DIR" "$BACKUP_DIR"
+fi
+
+cp -r /path/to/new/version/* "$APP_DIR"
+systemctl restart nginx
+echo "Deployment completed successfully!"
