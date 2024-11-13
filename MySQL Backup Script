@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Backup MySQL database
+DB_NAME="mydb"
+USER="root"
+PASSWORD="password"
+BACKUP_DIR="/path/to/backup"
+
+mysqldump -u "$USER" -p"$PASSWORD" "$DB_NAME" > "$BACKUP_DIR/$DB_NAME.sql"
+echo "Database backup completed."
